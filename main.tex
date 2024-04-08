@@ -1,0 +1,370 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at 
+http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. 
+You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{LightOrange}{HTML}{ff6459}
+\definecolor{CoolBlue}{HTML}{59d5ff}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{LightOrange}
+\colorlet{accent}{CoolBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Jack Gray}
+\tagline{Clinical Research Solutions Specialist}
+% Cropped to square from 
+https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 
+2.0
+\photo{2.5cm}{profilepic.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+    \email{contact@jackgray.nyc}
+%  \mailaddress{Address, Street, 00000 County}
+    \linkedin{linkedin.com/in/johnhgrayiii} 
+    \hspace{2pt}\homepage{jackgray.nyc}\hspace{15pt}
+    \location{Brooklyn, NY} \hspace{80pt}
+    \phone{929-409-5452} 
+    \hspace{25pt} \github{github.com/jackgray} 
+    \hspace{30pt}\insta{@latent.to.life}
+
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this 
+field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+% \end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{Principal Data Solution Architect/Platform Engineer}{ Center for Neuropsychoimaging of 
+Addiction and Related Conditions (NARC) \hspace{5pt}|\hspace{5pt} Dr. Rita Goldstein}{April 2022 -- 
+Ongoing}{Icahn School of Medicine at Mount Sinai }
+\begin{itemize}[label={}]
+    \item Oversee technical aspects of all research endeavors, including 5 concurrent studies funded 
+by public and private entities to investigate efficacy of novel pharmacologic, cognitive, and 
+digital therapeutic treatments to opiate and cocaine use disorders
+    \item Designed \& implemented collection of \textbf{self-managed IaC solutions} for collecting, 
+normalizing, processing, and sharing psychometric and neuroimaging data in a bare-metal/cloud hybrid 
+environment
+    % \item Designed and implemented collection of IaaC solutions for collecting, processing, and 
+sharing psychometric and neuroimaging data in a bare-metal/cloud hybrid environment:
+    % \item 5-node \textbf{HPC cluster} design to meet AI-driven data science workloads. Cut compute 
+costs by > 1/3 over 3 years of AWS expenses
+    % \begin{itemize}
+    % \item Wrote \textbf{Terraform, Make, and Butane} configuration to systematically provision new 
+nodes for HPC cluster running \textbf{Flatcar Container Linux} and automatically configure 
+\textbf{Hashicorp's Nomad, Consul, Apache Spark}, and network/security settings
+    % \begin{itemize}[label=-, noitemsep]
+    %     \item Allows cluster to be scaled up quickly and easily with templated system configs
+    %     \item \textit{Evaluated alongside K8's and selected for minimal maintenance overhead and 
+system resource efficiency}
+    % \end{itemize}
+    % -- \textit{Selected over K8's for low overhead}
+    
+    \item \textbf{STORAGE} | \textbf{MinIO S3 datalake} 
+    % w/ \textbf{Prometheus + Grafana} health monitoring -- \textit{Selected over AWS for cost 
+savings and HIPAA compliance}
+        \begin{itemize}[label={-}, noitemsep]
+            %     \item \textbf{Cut storage hardware costs} with erasure encoding over RAID, added 
+\textbf{end-to-end encryption} to PHI data, mitigated data loss \& corruption with IAM, object 
+versioning, and retention policies
+            %     \item Enabled DAG triggering through \textbf{pub/sub event notifications}
+            %     \item Provided unified storage backend for services and data collection endpoints
+            %     \item Read/write performance improvements alone resulted in > \textbf{15x 
+improvements in MRI computation speeds}
+            \item Central storage backbone for data collection endpoints and ETL processes
+            \item Event streaming \& pub/sub notifications
+        \end{itemize}
+    
+    \item \textbf{BIG DATA SEARCH/VIZ | Elasticsearch}
+        \begin{itemize}[label={-},noitemsep]
+            \item Logstash + Filebeat + Metricbeat -- Index and mutate study data, system metrics, 
+\& container logs
+            \item No-code \textbf{queries} on massive and unstructured data
+            \item \textbf{Kibana} Dashboards -- monitor KPI's from disparate sources at lightning 
+speeds
+        \end{itemize}
+        
+    \item \textbf{DATA PIPELINE MANAGEMENT} | \textbf{Kestra (Airflow alternative)}
+        \begin{itemize}[label={-}, noitemsep] 
+            \item Automated processing pipelines for MRI, NLP, EEG, genetic, and psychometric data 
+            \item Evaluated alongside Airflow and selected for its container-preferred architecture, 
+S3 integration, and low overhead
+        \end{itemize}
+        
+    \item \textbf{REACT + EXPRESS DEVELOPMENT}
+        \begin{itemize}[label={-}, noitemsep]
+            \item \textbf{Audio Recording App} -- records and transcribes audio diary entries for 
+NLP analysis from mobile web browser
+    %     \end{itemize}
+        
+    % \begin{itemize}[label={-}, noitemsep]
+        \item Mobile touchscreen version of Two-Step Decision Task -- collects drug craving metrics 
+at a new level of granularity; resulting discovery accepted for publication by Nature Mental Health
+    \end{itemize}
+    
+    \item \textbf{VIRTUAL MACHINES + CUSTOM OS} | \textbf{Terraform + Coder workspaces + Apache 
+Guacamole}
+        \begin{itemize}[label={-}, noitemsep]
+            \item Users spin up their own VMs containing pre-configured analysis tools
+            \item Auto-mounts S3 data per IAM policies
+            \item Runs in a web browser
+            \item Scalable -- lifted compute resource limitations
+            % \item Serves custom neuroanalysis operating system (narcOS) from a web browser
+            % \item Computationally scalable \& standardized research development environments
+            % \item Added standardization and reproducibility to analysis process and results
+            % \item Improved resource utilization and cut spending by negating need to purchase 
+individual workstations for analysts 
+        \end{itemize}
+    \item \textbf{DB / ETL SOLUTIONS | Python + Bash + S3 API + Webhooks} 
+        \begin{itemize}[label={-},noitemsep]
+            \item Normalized variables / unified schema across studies 
+            \item Modeled relational + graph data > ETL between RedCap + S3 \& PostgreSQL + ArangoDB
+        \end{itemize}
+        
+    % \begin{itemize}[label={-}, noitemsep] 
+        % \item Unlocked potential for ML-powered n-path and similarity analysis as a new way of 
+discovering correlations and outcome predictors
+    % \end{itemize}
+    % \item \textbf{PROJECT MANAGEMENT | Kanban boards + Gantt charts, Wikis}
+        % \begin{itemize}
+        %     \item 
+        % \end{itemize}
+    % \item Leveraged FOSS \textbf{project management and dev tools} such as \textbf{Kanban boards}, 
+\textbf{Gantt charts}, internal \textbf{wiki} sites, Nextcloud for \textbf{offline-sync of S3 
+buckets}; re-organized and converted unstructured neuroimaging datasets into \textbf{Git Annex} 
+repositories in accordance with BIDS
+    % \item Participated in grant writing, experimental design, and data analysis initiatives which 
+led to over 17 publications during tenure in leading journals such as Nature, Brain, National 
+Academy of Science, American Journal of Psychiatry, Neuropsychopharm, Journal of Neuroscience, and 
+Neuron
+
+    \item \textbf{HOSTING | SSL/TLS, DNS, Proxy Tunneling}
+        \begin{itemize}[label={-},noitemsep]
+            \item Cloudflare Argo tunnels expose public data collection services securely behind VPN 
+with end-to-end SSL encryption
+        \end{itemize}
+
+
+    \item All solutions were thoroughly evaluated \& tested alongside popular industry standards, 
+vetted for specific needs, scale, cost, and maintenance overhead, and configured to run in 
+self-managed/free \textbf{Docker} instances with zero recurring costs while allowing seamless 
+expansion to the cloud or paid/managed instances
+    % \begin{itemize}[label={-},noitemsep]
+    %     \item Configured to run in self-managed/free \textbf{Docker} instances with zero recurring 
+costs, but allow seamless expansion to the cloud
+    % \end{itemize}
+
+\end{itemize}
+% \end{itemize}
+
+\divider
+
+\cvevent{Neuroimaging Data Pipeline Developer}{Columbia University Department of Psychiatry 
+\hspace{5pt} | \hspace{5pt} MRI Center}{June 2021  -- April 2022}{New York State Psychiatric 
+Institute}
+\begin{itemize}[label={}]
+    \item Developed solutions to \textbf{extract, transform, and load} multi-modal imaging data 
+between imaging console, XNAT, and analysis HPC cluster
+
+    \begin{itemize}[label={-}]
+        \item Coil-noise detection pipeline sends \textbf{Slack notification} when early signs of a 
+specific type of image degradation are detected, informing MRI compute team immediately \& affording 
+a chance to fix the problem gracefully in scanner off-hours before catastrophic amounts of corrupt 
+data are collected
+        \item XNAT MRI pipeline to pull, label, validate, and pre-process selected neuroimaging data 
+securely in a multi-user environment with built-in auth service
+    \end{itemize}
+\end{itemize}
+
+\end{fullwidth}
+
+\begin{itemize}[label={}]
+    \begin{itemize}[label={}]
+        \item Automated MR Spectroscopy conversion and network transfer of proprietary GE imaging 
+formats
+        % using Perl, headless MATLAB, and reverse-engineering GE factory code
+    
+        \item Containerizer: interactive shell program for researchers to build Docker images from 
+Python or shell programs and run them on Docker swarm cluster
+    \end{itemize}
+\end{itemize}
+
+% \end{fullwidth}
+
+
+\divider
+% \vspace{200pt}
+
+
+\cvevent{Neuroimaging Research Tech}{Columbia University Department of Psychiatry \hspace{5pt} | 
+\hspace{5pt} MRI Center}{January 2016 -- June 2021}{New York State Psychiatric Institute}
+% Entered this role with graduate school in mind, but uncovered a brilliant hack -- the MRI clock 
+blessed me with considerable time to independently learn exactly what I wanted, and I never failed 
+to exploit it. I designed my own curriculum, started working on my own projects, and fell in love 
+with the power of software technology 
+
+% \divider
+
+% \cvevent{Electrical Design Engineer}{Conway \& Owen}{September 2014 -- February 2015}{Alpharetta, 
+GA}
+% \begin{itemize}
+% \item Drafted detailed electrical plans for commercial real estate
+
+% \end{itemize}
+
+% \divider
+
+% \cvevent{Plasma/Dialectrics Research Assistant}{Auburn Dept. of Electrical \& Computer 
+Engineering}{2013 --  2014}{Auburn University}
+
+% \divider
+
+% \cvevent{Research Assistant/Lab Tech}{Alabama Microelectronics Science and Technology 
+Center}{January 2010 -- August 2011}{Auburn University}
+% \begin{itemize}
+% \item In clean room setting, performed photolithography, chemical vapor deposition, silicon 
+etching, electroplating, and assembled microscopic surface mounts. 
+
+% \item Assisted in development of high-Q microinductors and micro-sized retinal implants.
+
+% \end{itemize}
+
+% \divider
+
+% \cvevent{IEEE President}{Eta Kappa Nu | Auburn Branch}{2009 -- 2010}{Auburn University}
+% Student advocate to Department of Electrical and Computer Engineering. Organized company 
+visitations, event advertising, E-Day (annual engineering festival), and other outreach activities.
+
+% \divider
+
+% \cvevent{Chief Systems Engineer |  cube satellite project}{Auburn University Student Space 
+Program}{2009 -- 2010}{Auburn University}
+% Co-manager and Systems Engineering subsection leader of student-built satellite (launched into 
+orbit October 2011). Oversaw logistics, testing, risk management, requirements documentation, and 
+integration. Also responsible for creation and up- keep the technical manual.
+
+% \divider
+
+% \cvevent{Embedded Software Lead}{Student Robotics Team}{2009 -- 2010}{Auburn University}
+% Won 1st place in IEEE SoutheastCon 2009 Competition to design and build an autonomous robot to 
+collect and organize recyclables
+
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related 
+ads
+% \end{itemize}
+
+% \cvsection{A Day of My Life}
+
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% % Some ad-hoc tweaking to adjust the labels so that they don't overlap
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/10em/accent!30/Sleeping \& dreaming about work,
+%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+%   5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+%   20/15em/accent!40/Spending time with family,
+%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+%   30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
+%   5/8em/accent!20/Baking cupcakes
+% }
+
+% \clearpage
+
+% \cvsection[page2sidebar]{Publications}
+
+% \nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, 
+type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference 
+Proceedings}},type=inproceedings]
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
+
