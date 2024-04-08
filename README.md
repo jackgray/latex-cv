@@ -1,4 +1,4 @@
-<iframe width="100%" height="800" src="./exports/Resume-platform-engineer.pdf">
+![Resume](/exports/Resume-platform-engineer.pdf)
 
 
 
