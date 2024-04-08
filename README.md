@@ -1,4 +1,4 @@
-![Resume](./exports/Resume-platform-engineer.pdf)
+![Resume](./exports/Resume-platform-engineer.pdf "Click to view resume")
 
 
 
